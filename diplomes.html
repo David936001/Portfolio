@@ -2,8 +2,21 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contact – David Gunenc</title>
+  <title>Diplômes – David Gunenc</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .clickable {
+      color: #007BFF;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .clickable:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
@@ -11,7 +24,7 @@
 
   <aside class="sidebar">
     <div class="profile">
-      <img src="davidpic.png" alt="Photo">
+      <img src="davidpic.png" alt="Photo de David">
       <h1>David Gunenc</h1>
       <h2>Développeur Web & Applications</h2>
     </div>
@@ -36,18 +49,22 @@
       <a href="Certification.html">Certification</a>
     </nav>
 
-    <h3>Contact</h3>
+    <h3>Diplômes & Certifications</h3>
 
-    <!-- FORMULAIRE -->
-    <form class="contact-form" action="insert_contact.php" method="POST">
-      <input type="text" name="nom" placeholder="Nom" required>
-      <input type="text" name="prenom" placeholder="Prénom" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
-      <button type="submit" class="btn-submit">Envoyer</button>
-    </form>
+    <ol>
+      <li>
+        <a href="bac.png" target="_blank" class="clickable">
+          <strong>Baccalauréat STMG</strong>
+        </a>
+        (2024–2025) – Lycée Mozart
+      </li>
 
-  </main>
+      <li><strong>Brevet des collèges</strong> (2021–2022) – Collège Simone Veil</li>
+      <li>Certification Pix</li>
+      <li>ASSR 1 & ASSR 2</li>
+    </ol>
+
+</main>
 </div>
 
 </body>

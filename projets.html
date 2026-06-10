@@ -1,40 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mes Projets</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Projets – David Gunenc</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="container">
 
-    <section id="projets">
-        <h1>Mes Projets</h1>
-        
-        
-        <div class="projet">
-            <h2>Projet  :Travaux en cours</h2>
-            
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="davidpic.png">
+      <h1>David Gunenc</h1>
+      <h2>Développeur Web & Applications</h2>
+    </div>
+
+    <div class="info">
+      <p>📞 07 67 25 89 21</p>
+      <p>✉️ davidgunenc@gmail.com</p>
+    </div>
+
+    <span class="tag">Bac+1</span>
+  </aside>
+
+  <main class="main">
+    <nav class="nav">
+      <a href="index.html">Profil</a>
+      <a href="diplomes.html">Diplômes</a>
+      <a href="competences.html">Compétences</a>
+      <a href="experience.html">Expérience</a>
+      <a href="projets.html">Projets</a>
+      <a href="veille.html">Veille</a>
+      <a href="contact.html">Contact</a>
+      <a href="Certification.html">Certification</a>
+    </nav>
+
+    <h3>Projets Professionnels</h3>
+
+    <div class="card project-card" id="projectCard">
+      <h4>Site E-commerce</h4>
+      <p>
+        Développement d’un site e-commerce avec gestion du panier,
+        paiement sécurisé et back-office administrateur.
+      </p>
+
+     <p><strong>Technologies: </strong>HTML, CSS, JavaScript, PHP, MySql</p>
+     <p><strong>Framework:</strong> Symfony</p>
+      <h4>Projet Bibliobus</h4>
+      <p>Développement d'une application orientée objet en C# permettant la gestion d'un catalogue de livres</p>
+     <p><strong>Technologies</strong> Visual Studio, C#<p/>
+      <h4>Projet UML</h4>
+<p></p>Conception et modélisation d'un système de gestion des réparations véhicules via un diagramme de cas d'utilisation UML réalisé avec Lucidchart</p>
+     <!-- Indicateur visuel que la carte est cliquable -->
+     <div class="click-hint">👆 Cliquez pour voir les images en plein écran</div>
+    </div> 
+
+    <!-- Modal pour l'affichage plein écran -->
+    <div class="modal" id="imageModal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-images">
+          <div class="modal-image-container">
+            <img src="screen du site.png" alt="Capture du site e-commerce">
+            <p class="image-caption">Interface du site e-commerce</p>
+          </div>
+          <div class="modal-image-container">
+            <img src="screen base de donnée.png" alt="Structure de la base de données">
+            <p class="image-caption">Structure de la base de données</p>
+          </div>
+          <div class="modal-image-container">
+            <img src="screen projet bibliobus.png" alt="Projet en C#">
+            <p class="image-caption">Projet Bibliobus - C#</p>
+          </div>
+          <div class="modal-image-container">
+            <img src="digramme uml.png" alt="Projet en C#">
+            <p class="image-caption">Projet UML</p>
         </div>
-        
-        
+      </div>
+    </div>
 
-    </section>
+  </main>
+</div>
 
-    <footer>
-        <p>&copy; 2025 [Gunenc David]. Tous droits réservés.</p>
-    </footer>
+<script>
+  // Récupération des éléments
+  const projectCard = document.getElementById('projectCard');
+  const modal = document.getElementById('imageModal');
+  const closeBtn = document.querySelector('.close-btn');
+  
+  // Fonction pour ouvrir le modal
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  // Fonction pour fermer le modal
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  // Écouteur d'événement sur la carte
+  projectCard.addEventListener('click', openModal);
+  
+  // Fermer avec le bouton X
+  closeBtn.addEventListener('click', closeModal);
+  
+  // Fermer en cliquant à l'extérieur du contenu du modal
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Fermer avec la touche Echap
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+</script>
 
 </body>
 </html>

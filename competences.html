@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contact – David Gunenc</title>
+  <title>Compétences – David Gunenc</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 
   <aside class="sidebar">
     <div class="profile">
-      <img src="davidpic.png" alt="Photo">
+      <img src="davidpic.png">
       <h1>David Gunenc</h1>
       <h2>Développeur Web & Applications</h2>
     </div>
@@ -36,19 +36,31 @@
       <a href="Certification.html">Certification</a>
     </nav>
 
-    <h3>Contact</h3>
+    <h3>Compétences Professionnelles</h3>
 
-    <!-- FORMULAIRE -->
-    <form class="contact-form" action="insert_contact.php" method="POST">
-      <input type="text" name="nom" placeholder="Nom" required>
-      <input type="text" name="prenom" placeholder="Prénom" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
-      <button type="submit" class="btn-submit">Envoyer</button>
-    </form>
+    <div class="skills-grid">
+      <div class="card">
+        <h4>Front-End</h4>
+        <p>HTML, CSS, JavaScript, Bootstrap</p>
+      </div>
+
+      <div class="card">
+        <h4>Back-End</h4>
+        <p>PHP, Symfony</p>
+      </div>
+
+      <div class="card">
+        <h4>Bases de données</h4>
+        <p>SQL, MySQL</p>
+      </div>
+
+      <div class="card">
+        <h4>Comptabilité</h4>
+        <p>Gestion comptable, saisie, rapprochement bancaire</p>
+      </div>
+    </div>
 
   </main>
 </div>
-
 </body>
 </html>
